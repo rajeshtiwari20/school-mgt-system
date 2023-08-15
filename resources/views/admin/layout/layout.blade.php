@@ -54,6 +54,7 @@
 <script src="{{ url('admin/plugins/raphael/raphael.min.js') }}"></script>
 <script src="{{ url('admin/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
 <script src="{{ url('admin/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
+
 <!-- ChartJS -->
 <script src="{{ url('admin/plugins/chart.js/Chart.min.js') }}"></script>
 
