@@ -16,12 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('contact', function () {
+    return view('pages.contact');
+});
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function(){
 
     Route::match (['get','post'],'login','AdminController@login');
 
     Route::group(['middleware'=>['admin']],function(){
-        Route::get('dashboard','AdminController@dashboard');
+        Route::get('dashboard','DashboardController@index');
+
+        Route::resource('student', StudentController::class);
+
         Route::get('logout','AdminController@logout');
      });
     

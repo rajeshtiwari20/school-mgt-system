@@ -9,10 +9,7 @@ use Validator;
 
 class AdminController extends Controller
 {
-    public function dashboard(){
-
-        return view('admin.dashboard');
-    }
+    
     public function login(Request $request){
          if($request->isMethod('post')){
             $data  = $request->all();
