@@ -15,8 +15,8 @@ class StudentController extends Controller
     public function index()
     {
         $student = DB::table('students')->get();// fetching data from the users table
-
-       return view('admin.student.index', compact('student'));
+        $breadcrumb = 'Student List';
+       return view('admin.student.index', compact('student','breadcrumb'));
         //return view('admin.student.index');
     }
     /**
@@ -26,7 +26,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('admin.student.create');
+        $breadcrumb = 'Add Student';
+        return view('admin.student.create', compact('breadcrumb'));
     }
     /**
      * Store a newly created resource in storage.

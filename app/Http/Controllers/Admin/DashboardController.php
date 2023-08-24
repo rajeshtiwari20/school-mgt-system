@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index(){
-
-        return view('admin.dashboard');
+        $breadcrumb = 'Dashboard';
+        return view('admin.dashboard', compact('breadcrumb'));
     }
 }
