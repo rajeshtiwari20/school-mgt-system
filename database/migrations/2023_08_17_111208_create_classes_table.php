@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->boolean('is_active')->defult(true);
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('added_user_type', ['ADMIN', 'SCHOOL']);
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL'])->nullable();
             $table->enum('deleted_user_type', ['ADMIN', 'SCHOOL'])->nullable();
@@ -31,8 +31,8 @@ return new class extends Migration
             $table->string('name');
             $table->boolean('is_active')->defult(true);
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('added_user_type', ['ADMIN', 'SCHOOL']);
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL'])->nullable();
             $table->enum('deleted_user_type', ['ADMIN', 'SCHOOL'])->nullable();
@@ -50,8 +50,8 @@ return new class extends Migration
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('session_id');
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('added_user_type', ['ADMIN', 'SCHOOL']);
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL'])->nullable();
             $table->enum('deleted_user_type', ['ADMIN', 'SCHOOL'])->nullable();

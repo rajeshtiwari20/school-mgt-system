@@ -17,10 +17,10 @@ return new class extends Migration
             $table->unsignedBigInteger('onboarding_session_id');
             $table->unsignedBigInteger('offboarding_session_id')->nullable();
             $table->double('fee', 8, 2);
-            $table->boolean('is_offboarded')->default(false);
+            $table->boolean('is_offboarded')->default(false)->comment('1=gone');
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('added_user_type', ['ADMIN', 'SCHOOL']);
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL'])->nullable();
             $table->enum('deleted_user_type', ['ADMIN', 'SCHOOL'])->nullable();
@@ -46,8 +46,8 @@ return new class extends Migration
             $table->enum('identity_type', ['aadhaar', 'voter','driving']);
             $table->string('identity_doc');
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('added_user_type', ['ADMIN', 'SCHOOL']);
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL'])->nullable();
             $table->enum('deleted_user_type', ['ADMIN', 'SCHOOL'])->nullable();
@@ -73,8 +73,8 @@ return new class extends Migration
             $table->enum('identity_type', ['aadhaar', 'voter','driving']);
             $table->string('identity_doc');
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('added_user_type', ['ADMIN', 'SCHOOL']);
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL'])->nullable();
             $table->enum('deleted_user_type', ['ADMIN', 'SCHOOL'])->nullable();

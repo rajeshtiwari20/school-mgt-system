@@ -17,8 +17,8 @@ return new class extends Migration
             $table->double('amount', 8, 2);
             $table->unsignedInteger('subscription_days')->default(0);
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });

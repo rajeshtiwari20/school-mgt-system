@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\StudentsController;
+use App\Http\Controllers\Api\ParentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,8 @@ use App\Http\Controllers\Api\StudentsController;
 */
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::resource('students', StudentsController::class);
+    Route::resource('students', StudentsController::class);    
+    Route::resource('parent', ParentController::class);
 });
 
 Route::post('/auth/register', [AuthController::class, 'createUser']);

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
+            $table->string('slug');
             $table->string('email')->unique();
             $table->unsignedBigInteger('mobile')->unique()->nullable();
             $table->text('address');
@@ -23,8 +24,8 @@ return new class extends Migration
             $table->boolean('is_active')->default(false);
             $table->boolean('is_subscribed')->default(false);
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL']);
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
@@ -36,8 +37,8 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->boolean('is_active')->default(false);
             $table->unsignedBigInteger('added_by');
-            $table->unsignedBigInteger('updated_by');
-            $table->unsignedBigInteger('delete_by');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('delete_by')->nullable();
             $table->enum('updated_user_type', ['ADMIN', 'SCHOOL']);
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
