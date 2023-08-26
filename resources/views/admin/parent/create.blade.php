@@ -9,23 +9,24 @@
                 <!-- jquery validation -->
                 <div class="card card-primary">
                   <div class="card-header">
-                    <h3 class="card-title">Add Student</h3>
+                    <h3 class="card-title">{{ $breadcrumb }}</h3>
                   </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form id="quickForm">
+                    <form id="parentForm" >
                             <div class="card-body">
                                 <div class="row">
-                                    <x-form.input type="text" name="admission_id" value="" label="Sr. No."/>
-                                    <x-form.input type="text" name="name" value="" label="Name"/>
-                                    <x-form.input type="email" name="email" value="" label="Email"/>
-                                    <x-form.input type="text" name="parent_id" value="" label="Parent"/> 
-                                    <x-form.input type="text" name="class" value="" label="Class"/> 
-                                    <x-form.input type="text" name="section " value="" label="Section"/> 
-                                    <x-form.input type="text" name="fee_concession " value="" label="Fee Concession"/> 
-                                    <x-form.input type="date" name="dob " value="" label="Birthday"/> 
+                                    <x-form.select name="name_prefix" value="" label="Prefix"/>
+                                    <x-form.input type="text" name="first_name" value="" label="First Name"/>
+                                    <x-form.input type="text" name="last_name" value="" label="Last Name"/>
                                     <x-form.input type="text" name="mobile" value="" label="Mobile"/>
-                                    <x-form.select name="state" value="" label="State"/>
+                                    <x-form.input type="email" name="email" value="" label="Email"/>
+                                    <x-form.select name="type" value="" label="Garden Type"/> 
+                                    <x-form.input type="file" name="photo" value="" label="Uplaod Photo"/> 
+                                    <x-form.input type="text" name="identity_no" value="" label="Identity No."/> 
+                                    <x-form.select name="identity_type" value="" label="Identity Type"/>
+                                    <x-form.input type="file" name="identity_doc" value="" label="Uplaod Identity doc"/>
+                                    
                                 </div>
                             </div>
                             <!-- /.card-body -->

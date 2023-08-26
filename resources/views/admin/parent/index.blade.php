@@ -1,8 +1,5 @@
 @extends('admin.layout.layout')
 @section('content')
-
-   
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -12,7 +9,7 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-              <a class="btn btn-info btn-sm" href="{{ url('admin/student/create') }}"> <i class="fas fa-add-alt"></i> Add Student</a>
+              <a class="btn btn-info btn-sm" href="{{ url('admin/parent/create') }}"> <i class="fas fa-add-alt"></i> Add Parent</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
