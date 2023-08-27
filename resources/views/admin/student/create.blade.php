@@ -16,16 +16,19 @@
                     <form id="quickForm">
                             <div class="card-body">
                                 <div class="row">
-                                    <x-form.input type="text" name="admission_id" value="" label="Sr. No."/>
-                                    <x-form.input type="text" name="name" value="" label="Name"/>
-                                    <x-form.input type="email" name="email" value="" label="Email"/>
-                                    <x-form.input type="text" name="parent_id" value="" label="Parent"/> 
-                                    <x-form.input type="text" name="class" value="" label="Class"/> 
-                                    <x-form.input type="text" name="section " value="" label="Section"/> 
-                                    <x-form.input type="text" name="fee_concession " value="" label="Fee Concession"/> 
-                                    <x-form.input type="date" name="dob " value="" label="Birthday"/> 
-                                    <x-form.input type="text" name="mobile" value="" label="Mobile"/>
-                                    <x-form.select name="state" value="" label="State"/>
+                                    <x-form.select :options="array()" name="parent" value="" label="Parent"/> 
+                                    <x-form.input type="text" name="first_name" value="" label="First Name"/>
+                                    <x-form.input type="last_name" name="last_name" value="" label="Last Name"/>
+                                    <x-form.input type="date" name="dob " value="" label="DOB"/>
+                                    <x-form.select :options="array('Male', 'Female', 'Others')" name="gender" value="" label="Gender" />
+                                    <x-form.textarea name="address" placeholder="Please Enter Address" label="Address"/>
+                                    <x-form.input type="file" name="photo" value="" label="Uplaod Photo"/> 
+                                    <x-form.input type="text" name="bank_name" value="" label="Bank Name"/> 
+                                    <x-form.input type="text" name="bank_account_no" value="" label="Bank Account No."/> 
+                                    <x-form.input type="text" name="bank_ifsc_code" value="" label="IFSC Code"/> 
+                                    <x-form.input type="text" name="identity_no" value="" label="Identity No."/> 
+                                    <x-form.select :options="array('Aadhaar', 'Voter', 'Driving')" name="identity_type" value="" label="Identity Type"/>
+                                    <x-form.input type="file" name="identity_doc" value="" label="Identity Doc"/> 
                                 </div>
                             </div>
                             <!-- /.card-body -->

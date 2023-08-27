@@ -14,17 +14,18 @@
                     <!-- /.card-header -->
                     <!-- form start -->
                     <form id="parentForm" >
+                      @csrf
                             <div class="card-body">
                                 <div class="row">
-                                    <x-form.select name="name_prefix" value="" label="Prefix"/>
+                                    <x-form.select :options="array('Mr.', 'Mrs.','Ms.','Miss','Master')" name="name_prefix" value="" label="Prefix"/>
                                     <x-form.input type="text" name="first_name" value="" label="First Name"/>
                                     <x-form.input type="text" name="last_name" value="" label="Last Name"/>
                                     <x-form.input type="text" name="mobile" value="" label="Mobile"/>
                                     <x-form.input type="email" name="email" value="" label="Email"/>
-                                    <x-form.select name="type" value="" label="Garden Type"/> 
+                                    <x-form.select :options="array('Father', 'Mother', 'Guardian')" name="type" value="" label="Garden Type"/> 
                                     <x-form.input type="file" name="photo" value="" label="Uplaod Photo"/> 
                                     <x-form.input type="text" name="identity_no" value="" label="Identity No."/> 
-                                    <x-form.select name="identity_type" value="" label="Identity Type"/>
+                                    <x-form.select :options="array('Aadhaar', 'Voter', 'Driving')" name="identity_type" value="" label="Identity Type"/>
                                     <x-form.input type="file" name="identity_doc" value="" label="Uplaod Identity doc"/>
                                     
                                 </div>

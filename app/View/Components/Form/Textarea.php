@@ -6,20 +6,19 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Select extends Component
+class Textarea extends Component
 {
     public $name;
     public $label;
-    public $options;
-
+    public $placeholder;
     /**
      * Create a new component instance.
      */
-    public function __construct($name,$label,$options)
+    public function __construct($name,$label,$placeholder)
     {
         $this->name = $name;
         $this->label = $label;
-        $this->options = $options;
+        $this->placeholder = $placeholder;
     }
 
     /**
@@ -27,7 +26,6 @@ class Select extends Component
      */
     public function render(): View|Closure|string
     {
-        //dd($this->options);
-        return view('components.form.select');
+        return view('components.form.textarea');
     }
 }
